@@ -7,8 +7,8 @@ import javax.swing.JPanel;
  
 public class MyPanelClass extends JPanel {
             /**
-	 * 
-	 */
+	* 
+	*/
 	private static final long serialVersionUID = 1L;
 
 			public void paintComponent(Graphics g) {
@@ -27,55 +27,84 @@ public class MyPanelClass extends JPanel {
                         g.setColor(Color.GREEN);
                         g.fillRect(x1, y1, width + 1, height + 1);
                         
-//                      //Draw a border
-//                        g.setColor(Color.RED);
-//                        g.drawRect(x1, y1, width, height);
-//                        
-//                      //Draw a border
-//                        g.setColor(Color.BLACK);
-//                        g.drawRect(x1 + 10, y1 + 10, width - 20, height - 20);
-//                        
-//                      //Draw a Line
-//                        g.setColor(Color.WHITE);
-//                        g.drawLine(x1, y1, x2, y2);
+                      //Draw a border
+                        g.setColor(Color.RED);
+                        g.drawRect(x1, y1, width, height);
                         
-                        //Draw a Line       hacer que este en la otra esquina
-//                        g.setColor(Color.WHITE);
-//                        g.drawLine(x1, y1, x2, y2);
+                      //Draw a border
+                        g.setColor(Color.BLACK);
+                        g.drawRect(x1 + 10, y1 + 10, width - 20, height - 20);
                         
-                        //https://www.google.com.pr/search?client=ubuntu&channel=fs&q=how+to+center+an+oval+with+a+colored+background&ie=utf-8&oe=utf-8&gws_rd=cr&ei=ZhqbWMf_CsTGmwHvgreoBA#channel=fs&q=how+to+center+an+oval+with+a+colored+background+java
-                      //Draw a oval					FINISH FILL OVAL PART
+                      //Draw a Line
+                        g.setColor(Color.BLUE);
+                        g.drawLine(x2, y1, x1, y2);
+                        
+                        //Draw a Line 
+                        g.setColor(Color.WHITE);
+                        g.drawLine(x1, y1, x2, y2);
+                        
+                      //Draw a oval					
                         g.setColor(Color.GRAY);
                         g.fillOval(x1, y1, 55, 55);
                         
-//                      //Draw a Polygon  
-//                        Polygon p = new Polygon();
-//                        p.addPoint(x1 + 5, y1 + 25);
-//                        p.addPoint(x1 + 20, y1 + 10);
-//                        p.addPoint(x1 + 35, y1 + 25);
-//                        p.addPoint(x1 + 25, y1 + 25);
-//                        p.addPoint(x1 + 25, y1 + 45);
-//                        p.addPoint(x1 + 15, y1 + 45);
-//                        p.addPoint(x1 + 15, y1 + 25);
-//                        g.setColor(Color.YELLOW);
-//                        g.fillPolygon(p);  
-//                        
-//                      //Draw a Polygon
-//                        Polygon p2 = new Polygon();
-//                        p2.addPoint(x1 + 25, y1 + 73);
-//                        p2.addPoint(x1 + 41, y1 + 73);
-//                        p2.addPoint(x1 + 47, y1 + 58);
-//                        p2.addPoint(x1 + 53, y1 + 73);
-//                        p2.addPoint(x1 + 69, y1 + 73);
-//                        p2.addPoint(x1 + 56, y1 + 83);
-//                        p2.addPoint(x1 + 61, y1 + 98);
-//                        p2.addPoint(x1 + 47, y1 + 88);
-//                        p2.addPoint(x1 + 34, y1 + 98);
-//                        p2.addPoint(x1 + 38, y1 + 83);
-//                        g.setColor(Color.BLACK);
-//                        g.drawPolygon(p2);
+                        Polygon p = new Polygon();
+                        p.addPoint(x1 + 5, y1 + 25);
+                        p.addPoint(x1 + 20, y1 + 10);
+                        p.addPoint(x1 + 35, y1 + 25);
+                        p.addPoint(x1 + 25, y1 + 25);
+                        p.addPoint(x1 + 25, y1 + 45);
+                        p.addPoint(x1 + 15, y1 + 45);
+                        p.addPoint(x1 + 15, y1 + 25);
+                        g.setColor(Color.YELLOW);
+                        g.fillPolygon(p);
+                        
+                        Polygon p2 = new Polygon();
+                        p2.addPoint(x1 + 25, y1 + 73);
+                        p2.addPoint(x1 + 41, y1 + 73);
+                        p2.addPoint(x1 + 47, y1 + 58);
+                        p2.addPoint(x1 + 53, y1 + 73);
+                        p2.addPoint(x1 + 69, y1 + 73);
+                        p2.addPoint(x1 + 56, y1 + 83);
+                        p2.addPoint(x1 + 61, y1 + 98);
+                        p2.addPoint(x1 + 47, y1 + 88);
+                        p2.addPoint(x1 + 34, y1 + 98);
+                        p2.addPoint(x1 + 38, y1 + 83);
+                        g.setColor(Color.WHITE);
+                        g.drawPolygon(p2);
                         
                         //Draw Puertorican Flag
-                          //orden de los colores/rectangulos rojo despues triangulo azul y asi
-            }
+                        g.setColor(Color.RED);
+                        g.fillRect(x1, y1, width + 1, y1 + 50);
+                        g.setColor(Color.WHITE);
+                        g.fillRect(x1, y1 + 50, width + 1, y1 + 100);
+                        g.setColor(Color.RED);
+                        g.fillRect(x1, y1 + 100, width + 1, y1 + 150);
+                        g.setColor(Color.WHITE);
+                        g.fillRect(x1, y1 + 150, width + 1, y1 + 200);
+                        g.setColor(Color.RED);
+                        g.fillRect(x1, y1 + 200, width + 1, y1 + 250);
+                        
+                        Polygon p3 = new Polygon ();
+                        p3.addPoint(x1, y1);
+                        p3.addPoint(x1 + 100, y1 + 125);
+                        p3.addPoint(x1, height);
+                        g.setColor(Color.BLUE);
+                        g.fillPolygon(p3);
+                        
+                        Polygon p4 = new Polygon();
+                        p4.addPoint(x1 + 25, y1 + 123);
+                        p4.addPoint(x1 + 41, y1 + 123);
+                        p4.addPoint(x1 + 47, y1 + 108);
+                        p4.addPoint(x1 + 53, y1 + 123);
+                        p4.addPoint(x1 + 69, y1 + 123);
+                        p4.addPoint(x1 + 56, y1 + 133);
+                        p4.addPoint(x1 + 61, y1 + 148);
+                        p4.addPoint(x1 + 47, y1 + 138);
+                        p4.addPoint(x1 + 34, y1 + 148);
+                        p4.addPoint(x1 + 38, y1 + 133);
+                        g.setColor(Color.WHITE);
+                        g.fillPolygon(p4);
+                        
+                        
+			}
 }
